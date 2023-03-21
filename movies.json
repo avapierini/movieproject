@@ -9,8 +9,8 @@
           "posters": ["img/shawshank.jpg", "img/shawshank2.jpg", "img/shawshank3.jpg"],
           "imdb": "http://www.imdb.com/title/tt0111161",
           "website": "https://www.facebook.com/ShawshankRedemptionFilm",
-          "likes": 1021,
-          "dislikes": 122,
+          "likes": 193,
+          "dislikes": 2,
           "posterindex": 0
     },
     {
@@ -23,8 +23,8 @@
           "posters": ["img/godfather.jpg", "img/godfather_2.jpg", "img/godfather_3.jpg"],
           "imdb": "http://www.imdb.com/title/tt0068646",
           "website": "https://www.facebook.com/thegodfather",
-          "likes": 928,
-          "dislikes": 109,
+          "likes": 495,
+          "dislikes": 12,
           "posterindex": 0
     },
     {
@@ -37,8 +37,8 @@
           "posters": ["img/godfather2.jpg", "img/godfather2_2.jpg"],
           "imdb": "http://www.imdb.com/title/tt0071562",
           "website": "https://www.facebook.com/thegodfather",
-          "likes": 855,
-          "dislikes": 99,
+          "likes": 956,
+          "dislikes": 59,
           "posterindex": 0
     },
     {
@@ -51,8 +51,8 @@
           "posters": ["img/darkknight.jpg", "img/darkknight2.jpg"],
           "imdb": "http://www.imdb.com/title/tt0468569",
           "website": "http://www.42entertainment.com/work/whysoserious",
-          "likes": 828,
-          "dislikes": 127,
+          "likes": 850,
+          "dislikes": 45,
           "posterindex": 0
     },
     {
@@ -65,8 +65,8 @@
           "posters": ["img/schindlerslist.jpg"],
           "imdb": "http://www.imdb.com/title/tt0108052",
           "website": "https://www.uphe.com/schindlers-list",
-          "likes": 812,
-          "dislikes": 101,
+          "likes": 452,
+          "dislikes": 92,
           "posterindex": 0
     }
 ]
