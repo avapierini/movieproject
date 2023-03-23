@@ -22,83 +22,24 @@
 
 
 const vue_app = Vue.createApp({
-      // This automatically imports your movies.json file and puts it into
-      //   the variable: movies
-      created () {
-            fetch('movies.json').then(response => response.json()).then(json => {
-                  this.movies = json
-            })
-      },
-
-
-      data() {
-        return {
-            // This holds your movies.json data.
-            movies: [],
-            /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
-            title: 'IMDB + Avas Top 8 Movies',
-            owner: 'Ava',
-            github: 'https://github.com/avapierini/movieproject',
-      }
+    // This automatically imports your movies.json file and puts it into
+    //   the variable: movies
+    created () {
+          fetch('movies.json').then(response => response.json()).then(json => {
+                this.movies = json
+          })
     },
-      methods: {
-            posterClick(movie){
-                  movie.posterindex++;
-                  if (movie.posterindex > movie.posters.length - 1) {
-                      movie.posterindex = 0;
-                  }  
-              },
-              timeText(minutes) {
-                  var hours = Math.floor(minutes / 60);
-                  var minutes = minutes % 60;
-                  return hours + ' hours, ' + minutes + ' minutes';           
-                },
-getMonthText(dataArray){
-      let month = '';
-      switch(dataArray[1]){
-            case 1:
-                  month = 'January';
-                  break;
-            case 2:
-                  month = 'February';
-                  break;
-            case 3:
-                  month = 'March';
-                  break;
-            case 4:
-                  month = 'April';
-                  break;
-            case 5:
-                  month = 'May';
-                  break;
-            case 6:
-                  month = 'June';
-                  break;
-            case 7:
-                  month = 'July';
-                  break;
-            case 8:
-                  month = 'August';
-                  break;
-            case 9:
-                  month = 'September';
-                  break;
-            case 10:
-                  month = 'October';
-                  break;
-            case 11:
-                  month = 'November';
-                  break;
-            case 12:
-                  month = 'December';
-                  break;
-      }
-      return month + ", " + dataArray[2] + ", " + dataArray[0]
-}
-
-}
-
-
+    data() {
+      return {
+          // This holds your movies.json data.
+          movies: [],
+          /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
+       
+    }
+  },
+    methods: {
+          /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+    }
 })
 
 vue_app.mount("#vue_app")
