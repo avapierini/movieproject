@@ -1,89 +1,117 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>IS219 Gallery (Project 3)</title>
-
-	<!-- Our CSS File along with Boostrap, and Bootstrap Icon Styles-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-	<link rel="stylesheet" type='text/css' href="style.css" />
-
-	<!-- DO NOT CHANGE ANYTHING ABOVE T	HIS LINE-->
-
-	<!-- Javascript Framework (e.g., vue.js) (ADD HERE) -->
-	<script src="https://unpkg.com/vue@3"></script>
-
-<head>
-<style>
-h1 {text-align: center;}
-p {text-align: center;}
-div {text-align: center;}
-</style>
-</head>
-<body>
-
-<h1 style="color:red;"<h1>Ava Pierinis Top 8 Movies</h1>
-
-</body>
-</html>
-
-</head>
-
-<body>
-
-
-	<div id="vue_app" class="container">
-
-		<div class="header">
-
-			<div class="container">
-				<h1 id="app_title">{{ appTitle }} </h1>
-			</div>
-
-		</div>
-
-		<div class="main">
-			<div class="row">
-				<div class="col-md-6" v-for="(movie, i) in movies">
-					<div class="thumbnail">
-						<!-- {{calls movies[0] which pulls the json text}} -->
-						<img class="poster img-fluid" @click="posterClick(movie)"
-							:src="movie.posters[movie.posterindex]" />
-						<div class="imageInfo">{{ movies[i].posterindex + 1}} out of {{movies[i].posters.length}}</div>
-
-						<p class="title">{{ movies[i].title}} </p>
-						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[i].iscore }} </p>
-						<p class="runtime">runtime: {{timeText(movies[i].runtime)}}</p>
-						<p class="released">Released: {{getMonthText (movies[i].released)}} | Rated: {{movies[i].rating}} </p>
-						<p class="websites">Websites: <a :href="movies[i].imdb">imdb</a> | <a :href="movies[i].website">website</a></p>
-
-						<div class="social">
-							<p class="likes" @click="movies[i].likes++"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movies[i].likes }}</p>
-							<p class="dislikes" @click="movies[i].dislikes++"><i class="bi bi-hand-thumbs-down"></i>{{ movies[i].dislikes }}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="footer">
-			<div class="container">
-				<a id="github" class="btn btn-lg btn-warning" :href='github'>
-					<i class="bi bi-github me-2"></i>{{ owner }}
-				</a>
-			</div>
-		</div>
-	</div>
-
-	<!-- This load the Vue.js code -->
-	<script type="text/javascript" src="site.js"></script>
-
-
-</body>
-
-</html>
+[
+      {
+            "title": "The Hunger Games",
+            "iscore": 9,
+            "rating": "PG-13",
+            "runtime": 142,
+            "released": [2012, 3, 23],
+            "country": "USA",
+            "posters": ["https://m.media-amazon.com/images/M/MV5BMjA4NDg3NzYxMF5BMl5BanBnXkFtZTcwNTgyNzkyNw@@._V1_.jpg", "https://i.ebayimg.com/images/g/nFYAAOSwwztihnnO/s-l1600.jpg", "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/abe4afb7-2036-4aa5-a702-5692c6e3c3fd/d4e9pm8-0fb5e285-3fa6-49d0-b720-02e21a011c88.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FiZTRhZmI3LTIwMzYtNGFhNS1hNzAyLTU2OTJjNmUzYzNmZFwvZDRlOXBtOC0wZmI1ZTI4NS0zZmE2LTQ5ZDAtYjcyMC0wMmUyMWEwMTFjODguanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.eAQAGXpo-HwjlGWw-mlRed63OpwduSpHkblFxhfvqSw"],
+            "imdb": "https://www.imdb.com/title/tt1392170/",
+            "website": "https://www.lionsgate.com/franchises/the-hunger-games",
+            "likes": 948,
+            "dislikes": 2,
+            "posterindex": 0
+      },
+      {
+            "title": "SCREAM",
+            "iscore": 9,
+            "rating": "R",
+            "runtime": 111,
+            "released": [1996, 12, 20],
+            "country": "USA",
+            "posters": ["https://i.etsystatic.com/22544178/r/il/5de03e/3479429877/il_570xN.3479429877_hsgm.jpg", "https://posterspy.com/wp-content/uploads/2023/01/FkftXPHXkAAVjSR.jpg", "https://alternativemovieposters.com/wp-content/uploads/2021/04/AlAbbazia_Scream.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0117571/",
+            "website": "https://hellosidney.com/scream/",
+            "likes": 593,
+            "dislikes": 23,
+            "posterindex": 0
+      },
+      {
+            "title": "Fear Street Part Two: 1978",
+            "iscore": 8,
+            "rating": "R",
+            "runtime": 109,
+            "released": [2021, 7, 8],
+            "country": "USA",
+            "posters": ["https://m.media-amazon.com/images/M/MV5BOTQxMWNiZmYtOGUzMi00OGU5LTkzMjctYWY4ZmJkZjZiYWI5XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg", "https://posterspy.com/wp-content/uploads/2021/07/FearStreetPoster.png", "https://wwwflickeringmythc3c8f7.zapwp.com/q:i/r:1/wp:1/w:371/u:https://cdn.flickeringmyth.com/wp-content/uploads/2021/06/Fear-Street-1-600x890.jpg"],
+            "imdb": "https://www.imdb.com/title/tt9701940/",
+            "website": "https://www.netflix.com/title/81334749",
+            "likes": 975,
+            "dislikes": 86,
+            "posterindex": 0
+      },
+      
+      
+      
+      {
+            "title": "The Shawshank Redemption",
+            "iscore": 9.3,
+            "rating": "R",
+            "runtime": 142,
+            "released": [1994, 10, 14],
+            "country": "USA",
+            "posters": ["img/shawshank.jpg", "img/shawshank2.jpg", "img/shawshank3.jpg"],
+            "imdb": "http://www.imdb.com/title/tt0111161",
+            "website": "https://www.facebook.com/ShawshankRedemptionFilm",
+            "likes": 1021,
+            "dislikes": 122,
+            "posterindex": 0
+      },
+      {
+            "title": "The Godfather",
+            "iscore": 9.2,
+            "rating": "R",
+            "runtime": 175,
+            "released": [1972, 3, 24],
+            "country": "USA",
+            "posters": ["img/godfather.jpg", "img/godfather_2.jpg", "img/godfather_3.jpg"],
+            "imdb": "http://www.imdb.com/title/tt0068646",
+            "website": "https://www.facebook.com/thegodfather",
+            "likes": 928,
+            "dislikes": 109,
+            "posterindex": 0
+      },
+      {
+            "title": "The Godfather: Part II",
+            "iscore": 9.0,
+            "rating": "R",
+            "runtime": 202,
+            "released": [1974, 12, 20],
+            "country": "USA",
+            "posters": ["img/godfather2.jpg", "img/godfather2_2.jpg"],
+            "imdb": "http://www.imdb.com/title/tt0071562",
+            "website": "https://www.facebook.com/thegodfather",
+            "likes": 855,
+            "dislikes": 99,
+            "posterindex": 0
+      },
+      {
+            "title": "The Dark Knight",
+            "iscore": 8.9,
+            "rating": "PG-13",
+            "runtime": 152,
+            "released": [2008, 7, 18],
+            "country": "USA",
+            "posters": ["img/darkknight.jpg", "img/darkknight2.jpg"],
+            "imdb": "http://www.imdb.com/title/tt0468569",
+            "website": "http://www.42entertainment.com/work/whysoserious",
+            "likes": 828,
+            "dislikes": 127,
+            "posterindex": 0
+      },
+      {
+            "title": "Schindler's List",
+            "iscore": 8.9,
+            "rating": "R",
+            "runtime": 195,
+            "released": [1993, 11, 30],
+            "country": "USA",
+            "posters": ["img/schindlerslist.jpg"],
+            "imdb": "http://www.imdb.com/title/tt0108052",
+            "website": "https://www.uphe.com/schindlers-list",
+            "likes": 812,
+            "dislikes": 101,
+            "posterindex": 0
+      }
+]
